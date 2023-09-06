@@ -3,6 +3,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 public class LTE {
+	//This is the main class for the line text editor, containing all 
+	//the buffers, the command line, and other variables used to run
+	//the program 
 	
 		public static CommandLine cmdln = new CommandLine();
 		public static Buffer buffer = new Buffer();
@@ -14,7 +17,9 @@ public class LTE {
 		public static ArrayList<String> parsedCmd;
 	
 	public static void main(String[] args) {
-		
+		//Main method for the line text editor. Contains a while loop
+		//that reads in each command and calls the associated method to 
+		//run the command. The while loop runs until a quit command is given 
 		int commandCount = 1; 
 		
 		// while loop to run text editor
@@ -279,7 +284,7 @@ public class LTE {
 		return;
 	}
 	
-	// method to read a file
+	// method to read a file into the buffer 
 	public static void readFile(String filename) {
 		
 		if(buffer.getDirty() == true) {
@@ -391,7 +396,7 @@ public class LTE {
 		
 	}
 	
-	// method to print lines withing a specified range
+	// method to print lines within a specified range
 	public static void printRange(int s, int e) {
 		int startIndex = buffer.text.getIndex();
 		if(buffer.text.getSize() <= 0) {
