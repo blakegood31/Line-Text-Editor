@@ -1,8 +1,9 @@
 import java.io.*;
 
 public class Buffer {
-	
-	//public class MainBuffer{
+		//This is the class used to create Buffers that hold text in the form
+		// of doubly linked lists. It also contains the name of the file and a boolean
+		//'dirty' used to see if the file has been changed. 
 		private String filespec;
 		private boolean dirty;
 		public DLList <String> text;
